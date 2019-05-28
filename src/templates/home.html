@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body %}
+	<div class="jumbotron text-center">
+		<h1>Message Forum</h1>
+		{% if session.logged_in %}
+		{% else %}
+		<p>Login:</p>
+		<a href="/register">Sign Up</a>
+		<a href="/login">Log in</a>
+		{% endif %}
+	</div>
+{% endblock %}
